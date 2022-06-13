@@ -4,74 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Николай Смаков</title>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="avatar.jpg" alt="фото" height="350px">
-        <h2>Николай Смаков</h2>
-    </header>
-    <div class="card">
-        <p>Мне 30 лет и я люблю web</p>
-        <p>Я люблю учиться, играть в футбол и проводить время со своей семьё</p>
-        <a href="http://vk.com">VK |</a>
-        <a href="http://telegram.com"> Telegram |</a>
-        <a href="http://Youtube"> YouTube</a>
+<header class="header">
+    <h1 class="center">by Smakov NK</h2>
+</header>
+    <div class="container">
+        <div class="row">
+            <h1>Калькулятор</h1>
+            <!-- Главный flexbox -->
+            <div class="input-group" id="input-group"> 
+                
+                <div class="group-content">
+                    <h3>Расчет дозы лекарственных препаратов</h3>
+                    <div class="text-field text-field_floating">
+                        <input class="text-field__input calc" type="number" id="weight" placeholder="Вес">
+                        <label class="text_field_label" for="weight">Вес</label>
+                    </div>
+                    <div class="text-field text-field_floating">
+                        <input class="text-field__input calc" type="number" id="dose" placeholder="Доза">
+                        <label class="text_field_label" for="weight">Доза</label>
+                    </div>
+                    <div class="text-field text-field_floating">
+                        <input class="text-field__input calc" type="number" id="times" placeholder="Количество приёмов">
+                        <label class="text_field_label" for="weight">Количество приёмов</label>
+                    </div>
+                    <div class="text-field text-field_floating">
+                        <input class="text-field__input calc" type="number" id="mg" placeholder="Количество мг">
+                        <label class="text_field_label bib" id="mgid" for="weight">Количество мг</label>
+                    </div>
+                    <div class="text-field text-field_floating">
+                        <input class="text-field__input calc" type="number" id="ml" placeholder="Количество мл" value="5">
+                        <label class="text_field_label bib" id="mlid" for="weight">Количество мл</label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="custom-checkbox">
+                          <input class="check" type="checkbox" name="color-1" value="indigo" checked>
+                          <span>Суспензия</span>
+                        </label>
+                      </div>
+                    
+                    <button class="btn" id="result-btn">Посчитать</button>
+                    <button class="btn"  id="reset-btn">Сбросить</button>
+                </div>
+                    <div class="input-title">
+                        <h2>Результат:</h2>
+                        <p id="result"></p>
+                    </div>
+                    <div class="input-discription">
+                        <h2>Описание</h2>
+                        <div id="disc">
+                            <p>Вес - масса тела</p>
+                            <p>Доза - разовая дозировка лекарственного препарата (в рассчете миллиграмм на килограмм массы тела)</p>
+                            <p>Количестве приёмов в сутки</p>
+                            <p>Количество мг - миллиграмм действующего вещества (например, 1000мг)</p>
+                            <p>Количество мл - объём жидкости, в котором разведено действующее вещество (например, для суспензий)</p>
+                        </div>
+                    </div>
+            </div>
+            <!-- Главный flexbox -->
+        </div>      
     </div>
-    <div class="card">
-        <h2>Мои хобби</h2>
-        <ul>
-            <li>Путешествия</li>
-            <li>Футбол</li>
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </div>
-    <div class="card">
-        <h2>Опыт работы</h2>
-        <table>
-            <thead>
-                <th>Название</th>
-                <th>Должность</th>
-                <th>Год</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Школа</td>
-                    <td>Школьник</td>
-                    <td>1997-2008</td>
-                </tr>
-                <tr>
-                    <td>Универ</td>
-                    <td>Студент</td>
-                    <td>2008-2015</td>
-                </tr>
-                <tr>
-                    <td>Работа</td>
-                    <td>Работник</td>
-                    <td>2016-</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <footer>
-    <h2>Связаться со мной</h2>
-    
-    <form action="">
-        <div>
-            <label for="name">Ваше имя</label><br>
-            <input type="text" id="name" placeholder="Введите имя">
-        </div>
-        <div>
-            <label for="email">smakovnk@yandex.ru</label><br>
-            <input type="email" id="email" placeholder="Введите email">
-        </div>
-        <div>
-            <label for="message">Ваше сообщение</label><br>
-            <textarea id="message" cols="30" rows="10" placeholder="Введите сообщение"></textarea>
-        </div>
-        <input type="submit" value="Отправить">
-        </form>
-    </footer>
+  
+<script src="app.js"></script>
+
 </body>
 </html>

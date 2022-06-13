@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root{
+    --md-primary-dark: #adc6ff;
+	--md-on-primary-dark: #002e69;
+	--md-primary-container-dark: #004494;
+	--md-on-primary-container-dark: #d8e2ff;
+	--md-secondary-dark: #bfc6dc;
+	--md-on-secondary-dark: #293041;
+	--md--secondary-container-dark: #3f4759;
+	--md--on-secondary-container-dark: #dbe2f9;
+	--md--tertiary-dark: #debcdf;
+	--md--on-tertiary-dark: #402843;
+	--md--tertiary-container-dark: #583e5b;
+	--md--on-tertiary-container-dark: #fbd7fc;
+	--md--error-dark: #ffb4ab;
+	--md--on-error-dark: #690005;
+	--md--error-container-dark: #93000a;
+	--md--on-error-container-dark: #ffdad6;
+	--md--outline-dark: #8e9099;
+	--md--background-dark: #1b1b1f;
+	--md--on-background-dark: #e3e2e6;
+	--md--surface-dark: #1b1b1f;
+	--md--on-surface-dark: #e3e2e6;
+	--md--surface-variant-dark: #44474f;
+	--md--on-surface-variant-dark: #c4c6d0;
+	--md--inverse-surface-dark: #e3e2e6;
+	--md--inverse-on-surface-dark: #1b1b1f;
+}
+*,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+html,
+body {
+margin: 0;
+padding: 0;
+}
+html {
+height: 100%;
+
+}
+
+@media (prefers-color-scheme: dark) {
+body{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: var(--md--background-dark);
+    color:var(--md-primary-dark);
+}
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: var(--md--on-surface-variant-dark);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--md--secondary-container-dark);
+    
+}
+.header{
+    height: 100px;
+    border-bottom: 1px solid #8e9099;
+    margin-bottom: 40px;
+
+}
+.container{
+    width: 90%;
+    display: flex;
+    min-height: 100vh;
+    margin: auto;
+    border: 1px solid #3f4759;
+    border-radius: 10px;
+}
+@media (min-width: 1200px){
+    .container{
+        width: 50%;
+        display: flex;
+        min-height: 100vh;
+        margin: auto;
+        border: 1px solid #3f4759;
+        border-radius: 10px;
+    }
+}
+.row{
+    text-align: center;
+    width: 100%;
+    margin: 30px auto;
+    
+}
+
+.center{
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    height: 35px;
+    width: 45%;
+    border-radius: 20px;
+    background-color: var(--md-on-primary-container-dark);
+    color: var(--md--surface-dark);
+    border: none;
+    margin-top: 15px;
+}
+
+.btn:hover{
+    background: var(--md-secondary-dark);
+}
+.btn:active{
+    background: var(--md--on-secondary-container-dark);
+}
+
+.input-group{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+
+}
+.group-content{
+    order: 1;
+    margin-left: 4.5%;
+    width: 30%;
+
+}
+.input-title{
+    order: 2;
+
+    width: 30%;
+    margin-left: 5px;
+
+}
+.input-discription{
+    order: 3;
+
+    width: 30%;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+
+.checkbox {
+    margin-top: 10px;
+    margin-bottom: 0.2em;
+  }
+
+  /* для элемента input c type="checkbox" */
+  .custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  /* для элемента label, связанного с .custom-checkbox */
+  .custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  /* создание в label псевдоэлемента before со следующими стилями */
+  .custom-checkbox>span::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  /* стили при наведении курсора на checkbox */
+  .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #b3d7ff;
+  }
+
+  /* стили для активного чекбокса (при нажатии на него) */
+  .custom-checkbox>input:not(:disabled):active+span::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+  }
+
+  /* стили для чекбокса, находящегося в фокусе */
+  
+
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  .custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: var(--md-on-primary-container-dark);
+  }
+
+  /* стили для чекбокса, находящегося в состоянии checked */
+  .custom-checkbox>input:checked+span::before {
+    border-color: var(--md-on-primary-dark);
+    background-color: var(--md-primary-container-dark);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  .custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+  }
+
+
+
+
+
+
+
+
+/* text field */
+.text-field {
+    display: flex;
+    
+
+}
+
+.text_field_label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.text-field__input {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #adc6ff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    
+
+}
+.text-field__input[type="search"]::-webkit-search-decoration,
+.text-field__input[type="search"]::-webkit-search-cancel-button,
+.text-field__input[type="search"]::-webkit-search-results-button,
+.text-field__input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+.text-field__input::placeholder {
+    color: #212529;
+    opacity: 0.4;
+}
+.text-field__input:focus {
+    color: #212529;
+    color: #adc6ff;
+    background: transparent;
+    outline: 0;
+    border-bottom: 1px solid #a7c7ec;
+}
+.text-field__input:hover {
+    background: #43434e;
+    opacity: 0.3;
+    outline: 0;
+    border-bottom: 1px solid #a7c7ec;
+}
+
+.text-field__input:disabled,
+.text-field__input[readonly] {
+    background-color: var(--md--secondary-container-dark);
+    opacity: 0.2;
+}
+  /* with floating label */
+.text-field_floating {
+    position: relative;
+}
+.text-field_floating .text-field__input {
+    height: calc(3rem + 2px);
+    line-height: 1.25;
+    padding: 1rem 0.75rem;
+}
+.text-field_floating .text_field_label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem .75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+}
+.text-field_floating .text-field__input::-moz-placeholder {
+    color: transparent;
+}
+.text-field_floating .text-field__input::placeholder {
+    color: transparent;
+}
+.text-field_floating .text-field__input:focus,
+.text-field_floating .text-field__input:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: .625rem;
+}
+.text-field_floating .text-field__input:focus~.text_field_label,
+.text-field_floating .text-field__input:not(:placeholder-shown)~.text_field_label {
+    opacity: .65;
+    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+.opa{
+    opacity: 0.1;
+}
+}
